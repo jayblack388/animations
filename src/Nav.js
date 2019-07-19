@@ -33,12 +33,12 @@ const Nav = ({ close, style }) => {
           <NavLink close={close} to="/four">
             Unlocked Gesture Box
           </NavLink>
-          <NavLink close={close} to="/five">
+          {/* <NavLink close={close} to="/five">
             Trails Boxes
           </NavLink>
           <NavLink close={close} to="/six">
             Springs Boxes
-          </NavLink>
+          </NavLink> */}
           <NavLink close={close} to="/seven">
             Chained Animation Boxes
           </NavLink>
