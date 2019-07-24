@@ -19,11 +19,13 @@ import curvy from "../images/backgrounds/white curvy.svg"
 
 const Card = props => {
   const [flipped, toggle] = useToggle()
+  const { cfg } = props
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
     transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
-    config: config.gentle,
+    config: config[cfg],
   })
+  console.log(config)
   const style = {
     height: "100%",
     width: "100%",
@@ -144,6 +146,8 @@ const positionCard = i => {
 
 const Cards = ({ siteTitle }) => {
   const [on, toggle] = useState(false)
+  const [cfg, setCfg] = useState("gentle")
+  const [value, setValue] = useState("gentle")
   const cardsRef = useRef()
   const onScreen = useOnScreen(cardsRef, "-350px")
   const transRef = useRef()
@@ -268,6 +272,7 @@ const Cards = ({ siteTitle }) => {
       >
         {transitions.map(({ item, key, props: animation }, i) => (
           <Card
+            cfg={cfg}
             key={key}
             item={{
               ...item,
@@ -288,6 +293,18 @@ const Cards = ({ siteTitle }) => {
           />
         ))}
       </div>
+      <select
+        style={{ position: "absolute", bottom: -350 }}
+        value={cfg}
+        onChange={e => setCfg(e.target.value)}
+      >
+        <option value="gentle">Gentle</option>
+        <option value="default">Default</option>
+        <option value="molasses">Molasses</option>
+        <option value="slow">Slow</option>
+        <option value="stiff">Stiff</option>
+        <option value="wobbly">Wobbly</option>
+      </select>
       <Button style={{ position: "absolute", bottom: -425 }}>
         Get Early Access
       </Button>
