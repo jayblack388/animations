@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="284.24" height="586.605" viewBox="0 0 284.24 586.605">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.136" y1="-0.219" x2="1.643" y2="1.791" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ac7cff"/>
+      <stop offset="1" stop-color="#f695e7"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.068" y1="0.015" x2="1.397" y2="1.508" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a06bff"/>
+      <stop offset="1" stop-color="#f895e7"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-0.395" y1="-46.514" x2="1.556" y2="55.923" xlink:href="#linear-gradient-2"/>
+  </defs>
+  <g id="Group_98" data-name="Group 98" transform="translate(0 0)">
+    <g id="Group_97" data-name="Group 97">
+      <rect id="Rectangle_100" data-name="Rectangle 100" width="24.273" height="82.868" rx="2.286" transform="translate(0 71.106)" fill="#ebcafb"/>
+      <rect id="Rectangle_101" data-name="Rectangle 101" width="24.273" height="31.873" rx="1.418" transform="translate(0 185.905)" fill="#ebcafb"/>
+      <rect id="Rectangle_102" data-name="Rectangle 102" width="24.273" height="31.873" rx="1.418" transform="translate(259.967 153.973)" fill="#ebcafb"/>
+      <rect id="Rectangle_103" data-name="Rectangle 103" width="278.803" height="586.605" rx="25.602" transform="translate(2.843)" fill="url(#linear-gradient)"/>
+      <path id="Path_554" data-name="Path 554" d="M1071.709,667.156a24.968,24.968,0,0,1-24.968,24.968H827.375a26.59,26.59,0,0,1-26.589-26.59V163.206a26.59,26.59,0,0,1,26.589-26.589h217.744a26.59,26.59,0,0,1,26.59,26.589Z" transform="translate(-794.003 -132.887)" fill="url(#linear-gradient-2)"/>
+      <path id="Path_555" data-name="Path 555" d="M982.918,638.493H870.893a2.571,2.571,0,1,1,0-5.142H982.918a2.571,2.571,0,0,1,0,5.142Z" transform="translate(-784.661 -64.172)" fill="url(#linear-gradient-3)"/>
+    </g>
+    <rect id="Rectangle_104" data-name="Rectangle 104" width="266.37" height="547.538" rx="20" transform="translate(9.059 9.421)" fill="#fff"/>
+  </g>
+</svg>

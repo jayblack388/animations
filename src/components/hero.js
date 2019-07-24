@@ -2,9 +2,8 @@ import React, { useEffect, useRef, useState } from "react"
 import PropTypes from "prop-types"
 import { useSprings, animated as a, config } from "react-spring"
 import Image from "./image"
-import mockupFrame from "../images/mockup-frame.png"
+import mockupFrame from "../images/purple_phone_outline.svg"
 import { useOnScreen } from "../hooks"
-import Button from "./button"
 import bg from "../images/backgrounds/middle gradient.svg"
 import curvy from "../images/backgrounds/white curvy.svg"
 import flipCurvy from "../images/backgrounds/white curvy flipped.svg"
@@ -16,7 +15,7 @@ const Phone = props => {
         margin: 20,
         width: "250px",
         position: "absolute",
-        top: "50%",
+        top: "40%",
         left: "50%",
         transform: "translate(-50%, -50%)",
         ...props.style,
@@ -46,7 +45,7 @@ const AnimatedPhone = a(Phone)
 const whichWay = i => {
   switch (i) {
     case 1:
-      return "translate(45%, -50%) scale(0.85)"
+      return "translate(-50%, -50%) scale(1)"
     case 2:
       return "translate(-145%, -50%) scale(0.85)"
     case 3:
@@ -54,7 +53,7 @@ const whichWay = i => {
     case 4:
       return "translate(-225%, -50%) scale(0.75)"
     default:
-      return "translate(-50%, -50%) scale(1)"
+      return "translate(45%, -50%) scale(0.85)"
   }
 }
 
@@ -98,7 +97,7 @@ const Header = ({ siteTitle }) => {
         <div
           style={{
             position: "absolute",
-            top: 0,
+            top: -30,
             right: 0,
             width: "100%",
             height: "100vh",
@@ -107,7 +106,10 @@ const Header = ({ siteTitle }) => {
             zIndex: 0,
           }}
         >
-          <img src={curvy} style={{ width: "100%", position: "absolute" }} />
+          <img
+            src={curvy}
+            style={{ width: "100%", position: "absolute", top: -20 }}
+          />
           <img
             src={bg}
             style={{
@@ -120,7 +122,7 @@ const Header = ({ siteTitle }) => {
             style={{
               width: "100%",
               position: "absolute",
-              bottom: "-20px",
+              bottom: "-60px",
               right: 0,
             }}
           />
