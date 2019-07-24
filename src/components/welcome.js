@@ -146,9 +146,9 @@ const Welcome = ({ siteTitle }) => {
             <a.img
               style={{
                 position: "absolute",
-                height: "85%",
+                height: "87%",
                 top: "-1rem",
-                right: "9.5rem",
+                right: "9.7rem",
                 transform: props.xy.interpolate(trans4)
               }}
               src={phoneFrame}
