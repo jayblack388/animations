@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="91.556" height="91.555" viewBox="0 0 91.556 91.555">
+  <defs>
+    <filter id="Ellipse_349" x="0" y="0" width="91.556" height="91.555" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="right_more_arrow" data-name="right more arrow" transform="translate(1318.556 1415.555) rotate(180)">
+    <g transform="matrix(-1, 0, 0, -1, 1318.56, 1415.56)" filter="url(#Ellipse_349)">
+      <circle id="Ellipse_349-2" data-name="Ellipse 349" cx="36.778" cy="36.778" r="36.778" transform="translate(9 6)" fill="#fff"/>
+    </g>
+    <g id="dropdown" transform="translate(1263.431 1389.916) rotate(-90)" opacity="0.6">
+      <g id="line" transform="translate(3.029 0) rotate(45)" fill="#a737d5" stroke="#a737d5" stroke-width="2">
+        <rect width="22.845" height="4.284" rx="2.142" stroke="none"/>
+        <rect x="1" y="1" width="20.845" height="2.284" rx="1.142" fill="none"/>
+      </g>
+      <g id="line-2" data-name="line" transform="translate(14.127 16.154) rotate(-45)" fill="#a737d5" stroke="#a737d5" stroke-width="2">
+        <rect width="22.845" height="4.284" rx="2.142" stroke="none"/>
+        <rect x="1" y="1" width="20.845" height="2.284" rx="1.142" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
