@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
-import { animated as a, useSpring } from "react-spring"
+import { animated as a, useSpring, useTransition } from "react-spring"
 import Button from "./button"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -34,8 +34,8 @@ const Image = () => (
 )
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
-const trans2 = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`
-const trans3 = (x, y) => `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`
+// const trans2 = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`
+// const trans3 = (x, y) => `translate3d(${x / 6 - 250}px,${y / 6 - 200}px,0)`
 const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`
 
 const Welcome = ({ siteTitle }) => {
@@ -43,7 +43,18 @@ const Welcome = ({ siteTitle }) => {
     xy: [0, 0],
     config: { mass: 10, tension: 550, friction: 140 },
   }))
-
+  const [on, toggle] = useState(false)
+  const transition = useTransition(on, null, {
+    from: {
+      opacity: 0,
+      transform: "translate3d(0, -40px, 0)",
+    },
+    enter: { opacity: 1, transform: "translate3d(0, 0, 0)" },
+    leave: { opacity: 0, transform: "translate3d(0, -40px, 0)" },
+  })
+  useEffect(() => {
+    toggle(true)
+  }, [])
   return (
     <div
       style={{
@@ -69,23 +80,30 @@ const Welcome = ({ siteTitle }) => {
         }}
         src={bg}
       />
-      <div
-        style={{
-          width: "20%",
-          height: "100%",
-          marginTop: 400,
-          marginRight: 100,
-        }}
-      >
-        <h1 style={{ fontWeight: 500 }}>Create a</h1>
-        <h1 style={{ fontWeight: 700 }}>HowTo</h1>
-        <p>
-          Lorem Ipsum for now and then we’ll have actual words to supplement
-          this title.
-        </p>
-        <Button>Get started!</Button>
-        <Image />
-      </div>
+      {transition.map(
+        ({ item, key, props: animation }) =>
+          item && (
+            <a.div
+              key={key}
+              style={{
+                width: "20%",
+                height: "100%",
+                marginTop: 400,
+                marginRight: 100,
+                ...animation,
+              }}
+            >
+              <h1 style={{ fontWeight: 500 }}>Create a</h1>
+              <h1 style={{ fontWeight: 700 }}>HowTo</h1>
+              <p>
+                Lorem Ipsum for now and then we’ll have actual words to
+                supplement this title.
+              </p>
+              <Button>Get started!</Button>
+              <Image />
+            </a.div>
+          )
+      )}
       <div
         style={{
           width: "75%",
@@ -139,7 +157,7 @@ const Welcome = ({ siteTitle }) => {
                 height: "80%",
                 bottom: "-1rem",
                 right: "5rem",
-                transform: props.xy.interpolate(trans4)
+                transform: props.xy.interpolate(trans4),
               }}
               src={hand}
             />
@@ -149,7 +167,7 @@ const Welcome = ({ siteTitle }) => {
                 height: "87%",
                 top: "-1rem",
                 right: "9.7rem",
-                transform: props.xy.interpolate(trans4)
+                transform: props.xy.interpolate(trans4),
               }}
               src={phoneFrame}
             />

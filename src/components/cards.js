@@ -25,7 +25,6 @@ const Card = props => {
     transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
     config: config[cfg],
   })
-  console.log(config)
   const style = {
     height: "100%",
     width: "100%",
@@ -41,6 +40,7 @@ const Card = props => {
     width: "100%",
     height: "100%",
     cursor: "pointer",
+    borderRadius: "10px",
     willChange: "transform, opacity",
   }
 
