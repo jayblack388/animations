@@ -1,9 +1,13 @@
 {
   "name": "gatsby-starter-landing-page",
-  "private": true,
+  "private": false,
   "description": "A simple starter to create a minimal landing page with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Gill <kyle.robert.gill@gmail.com>",
+  "author": {
+    "name": "John Blackwell",
+    "email": "jblackwell072588@gmail.com",
+    "url": "https://johnblackwell.dev"
+  },
   "dependencies": {
     "gatsby": "^2.1.37",
     "gatsby-image": "^2.0.34",
