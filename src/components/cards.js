@@ -147,7 +147,7 @@ const positionCard = i => {
 const Cards = ({ siteTitle }) => {
   const [on, toggle] = useState(false)
   const [cfg, setCfg] = useState("gentle")
-  const [value, setValue] = useState("gentle")
+  // const [value, setValue] = useState("gentle")
   const cardsRef = useRef()
   const onScreen = useOnScreen(cardsRef, "-350px")
   const transRef = useRef()
@@ -253,8 +253,8 @@ const Cards = ({ siteTitle }) => {
           zIndex: 0,
         }}
       >
-        <img src={curvy} style={{ width: "100%", position: "absolute" }} />
-        <img src={bg} style={{ width: "100%" }} />
+        <img alt='curvy' src={curvy} style={{ width: "100%", position: "absolute" }} />
+        <img alt='bg' src={bg} style={{ width: "100%" }} />
       </div>
       <div
         style={{

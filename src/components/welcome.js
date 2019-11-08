@@ -69,6 +69,7 @@ const Welcome = ({ siteTitle }) => {
       }}
     >
       <img
+        alt="bg"
         style={{
           position: "absolute",
           top: 0,
@@ -128,9 +129,11 @@ const Welcome = ({ siteTitle }) => {
               right: "1rem",
               transform: props.xy.interpolate(trans1),
             }}
+            alt='soundwave-1'
             src={sw1}
           />
           <a.img
+          alt='soundwave-2'
             style={{
               position: "absolute",
               height: "70%",
@@ -141,6 +144,7 @@ const Welcome = ({ siteTitle }) => {
             src={sw2}
           />
           <a.img
+          alt='soundwave-3'
             style={{
               position: "absolute",
               height: "70%",
@@ -152,6 +156,7 @@ const Welcome = ({ siteTitle }) => {
           />
           <div>
             <a.img
+            alt='hand'
               style={{
                 position: "absolute",
                 height: "80%",
@@ -162,6 +167,7 @@ const Welcome = ({ siteTitle }) => {
               src={hand}
             />
             <a.img
+            alt='phoneframe'
               style={{
                 position: "absolute",
                 height: "87%",

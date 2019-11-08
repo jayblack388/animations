@@ -4,9 +4,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Welcome from "../components/welcome"
 import Hero from "../components/hero"
-import Content from "../components/content"
+// import Content from "../components/content"
 import Cards from "../components/cards"
-import CallToAction from "../components/cta"
+// import CallToAction from "../components/cta"
 
 const IndexPage = () => (
   <Layout>

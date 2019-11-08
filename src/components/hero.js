@@ -107,10 +107,12 @@ const Header = ({ siteTitle }) => {
           }}
         >
           <img
+          alt='curvy'
             src={curvy}
             style={{ width: "100%", position: "absolute", top: -20 }}
           />
           <img
+          alt='bg'
             src={bg}
             style={{
               width: "100%",
@@ -118,6 +120,7 @@ const Header = ({ siteTitle }) => {
             }}
           />
           <img
+          alt='flipCurvy'
             src={flipCurvy}
             style={{
               width: "100%",
