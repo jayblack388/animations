@@ -11,27 +11,27 @@ import sw1 from "../images/soundwave1.svg"
 import sw2 from "../images/soundwave2.svg"
 import sw3 from "../images/soundwave3.svg"
 
-const Image = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "poweredBy.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <Img
-        style={{ marginLeft: "-35px", marginTop: "65px", height: "65px" }}
-        fluid={data.placeholderImage.childImageSharp.fluid}
-      />
-    )}
-  />
-)
+// const Image = () => (
+//   <StaticQuery
+//     query={graphql`
+//       query {
+//         placeholderImage: file(relativePath: { eq: "poweredBy.png" }) {
+//           childImageSharp {
+//             fluid(maxWidth: 300) {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//       }
+//     `}
+//     render={data => (
+//       <Img
+//         style={{ marginLeft: "-35px", marginTop: "65px", height: "65px" }}
+//         fluid={data.placeholderImage.childImageSharp.fluid}
+//       />
+//     )}
+//   />
+// )
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
 // const trans2 = (x, y) => `translate3d(${x / 8 + 35}px,${y / 8 - 230}px,0)`
@@ -101,7 +101,7 @@ const Welcome = ({ siteTitle }) => {
                 supplement this title.
               </p>
               <Button>Get started!</Button>
-              <Image />
+              {/* <Image /> */}
             </a.div>
           )
       )}
