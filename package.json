@@ -24,7 +24,7 @@
     "react-spring": "^8.0.27",
     "react-waypoint": "^9.0.2",
     "resize-observer-polyfill": "^1.5.1",
-    "sharp": "^0.22.0"
+    "sharp": "^0.30.5"
   },
   "devDependencies": {
     "prettier": "^1.16.4"
