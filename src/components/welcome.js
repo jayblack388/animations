@@ -172,7 +172,7 @@ const Welcome = ({ siteTitle }) => {
                 position: "absolute",
                 height: "87%",
                 top: "-1rem",
-                right: "9.7rem",
+                right: "11.2rem",
                 transform: props.xy.interpolate(trans4),
               }}
               src={phoneFrame}
